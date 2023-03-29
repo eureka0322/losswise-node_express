@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <meta name="description" content="Losswise is an analytics dashboard for machine learning designed to save you time and money." />
+  <meta name="keywords" content="machine learning, deep learning, tensorflow, pytorch, numerical optimization" />
+
+  <title>Losswise</title>
+  <link rel="stylesheet" type="text/css" class="ui" href="../dist/semantic.min.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" class="ui" href="../stylesheets/home.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="../stylesheets/customPrettyCode.css">
+
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page Contents -->
+<div class="homepage-container">
+  <div class="ui vertical masthead center aligned segment fixed-navbar">
+    <div class="ui container top-header">
+      <div class="ui large secondary menu">
+        <a class="item">
+          <img src="../images/LS_Color_Logo1.png" class="ui image logo-img" />
+        </a>
+        <div class="right item">
+          <a href="/dashboard" class="losswise-btn">Go to app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical masthead center aligned segment">
+    <div class="video-container">
+      <div class="ui stackable two column divided grid container">
+        <div class="row">
+          <div class="ui middle aligned column" style="padding-bottom: 30px">
+            <div class="column subheader">
+              <h1 class="ui header">
+                Monitoring for ML
+              </h1>
+              <h2>Real time graphs, comparison tables, completion estimates, and more.</h2>
+              <div class="learn-more-container">
+                <a href="/login" class="losswise-btn reversed">GO TO APP</a>
+                <div class="middle-text">OR</div>
+                <a href="https://docs.losswise.com" class="learn-more">LEARN MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <!--<a href="https://vimeo.com/236339508" target="_blank">-->
+              <img src="../images/losswise_laptop.png" class="ui centered huge image comp-image" />
+            <!--</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment example-body-container">
+    <div class="ui stackable two column divided grid container">
+      <div class="row mv60 mt30">
+        <div class="ui middle aligned column text-container-left">
+          <h2 class="ui header">Elegant API</h2>
+          <p>Losswise provides ML practioners with an intuitive and elegant Python API and accompanying dashboard to visualize progress within training sessions as well as across training sessions.</p>
+          <p>It's ideal for running hyperparameter searches, model comparison experiments, as well as simply tracking one-off training scripts.</p>
+        </div>
+        <div class="column">
+          <div class="code-container">
+            <pre>
+              <code class="prettyprint display-linebreak" style="">
+import losswise
+import time
+import random
+losswise.set_api_key("my api key")
+session = losswise.Session(tag='test', max_iter=10)
+graph = session.graph('loss', kind='min')
+for x in range(10):
+    a = 1. / (0.1 + x + 0.1 * random.random())
+    b = 1.5 / (0.1 + x + 0.2 * random.random())
+    graph.append(x, {'train_loss': a, 'test_loss': b})
+    time.sleep(1.)
+session.done()</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="white-bg">
+      <div class="ui stackable two column divided grid container">
+        <div class="row mv60">
+          <div class="ui middle aligned column text-container-left">
+            <h2 class="ui header">Interactive visualization</h2>
+            <p>Points are plotted in real time as they are received.</p>
+            <p>Zoom in, select a single session, or multiple if you want to compare runs, and hover to view data points.</p>
+          </div>
+          <div class="column">
+            <div class="image-shadow">
+              <img src="../images/losswise_graph_example.png" class="ui image fluid">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="ui stackable two column divided grid container">
+      <div class="row mv60">
+        <div class="ui middle aligned column text-container-left">
+          <h2 class="ui header">Summary statistics</h2>
+          <p>Losswise provides real time tables showing you your latest model results, <b>including estimates of when your models will be done training.</b></p>
+          <p>Sort and filter by min loss, max accuracy, or whatever you wish, to get a better understanding of how parameters affect your final results.</p>
+        </div>
+        <div class="column">
+          <div class="image-shadow pt-25">
+            <img src="../images/losswise_table.png" class="ui image fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-bg features-container">
+      <div class="ui grid container">
+        <div class="stackable three column row mv100">
+          <div class="column">
+            <div class="icon-container">
+              <img src="../images/speed.svg" />
+            </div>
+            <h2 class="ui header">Zero overhead</h2>
+            <p>Losswise uses separate threads to log data to the cloud, ensuring zero performance impact on user's applications. Training big models is slow enough at it is.</p>
+          </div>
+          <div class="column">
+            <div class="icon-container">
+              <img src="../images/robust.svg" />
+            </div>
+            <h2 class="ui header">Robust</h2>
+            <p>Losswise is robust against network failures. We are not in the business of crashing people's programs. If your training server loses internet access, Losswise will just print a warning to the console, and resumes logging once internet access is re-established.</p>
+          </div>
+          <div class="column">
+            <div class="icon-container">
+              <img src="../images/flexibility.svg" />
+            </div>
+            <h2 class="ui header">Complete flexibility</h2>
+            <p>Losswise believes monitoring and model tracking should be decoupled from your machine learning framework. Use Losswise to seamlessly switch between Tensorflow, Pytorch, Caffe2, MxNet, Gluon, scikit-learn, or your ML framework of choice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="white-bg">-->
+      <!--<div class="ui vertically divided grid container">-->
+        <!--<div class="mv60">-->
+          <!--<div>-->
+            <!--<div class="ui middle aligned column text-container-left pr-0 mb-60">-->
+              <!--<h2 class="ui header">Zero overhead</h2>-->
+              <!--<p>Losswise uses separate threads to log data to the cloud, ensuring zero performance impact on user's applications. Training big models is slow enough at it is.</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div>-->
+            <!--<div class="ui middle aligned column text-container-left pr-0 mb-60">-->
+              <!--<h2 class="ui header">Robust</h2>-->
+              <!--<p>Losswise is robust against network failures. We are not in the business of crashing people's programs. If your training server loses internet access, Losswise will just print a warning to the console, and resumes logging once internet access is re-established.</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div>-->
+            <!--<div class="ui middle aligned column text-container-left pr-0">-->
+              <!--<h2 class="ui header">Complete flexibility</h2>-->
+              <!--<p>Losswise believes monitoring and model tracking should be decoupled from your machine learning framework. Use Losswise to seamlessly switch between Tensorflow, Pytorch, Caffe2, MxNet, Gluon, scikit-learn, or your ML framework of choice.</p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="affordable-container">
+      <div class="ui container center testimonial-container">
+        <div class="ui grid text-container-center ">
+          <div class="row testimonial testimonial--border">
+            <div class="twelve wide column">
+              <blockquote class="testimonial__quote">
+                "Losswise makes it easy to track the progress of a machine learning project. With Losswise and its Buildkite integration, I find I spend less time worrying about the operational complexity of training models so I can focus on other things such as improving datasets or experimenting with new model architectures."
+              </blockquote>
+            </div>
+            <div class="four wide column testimonial__attribution">
+              <div class="testimonial__image--wrapper testimonial--reverse">
+                <img class="testimonial__image" src="../images/testi_pic1.png" alt="Nicolas D. Jimenez">
+              </div>
+              <div>
+                <p class="testimonial__name">Nico Jimenez</p>
+                <p class="testimonial__title">Founder at <a href="https://mathpix.com/"><img class="logo_container_1" src="../images/testi_logo1.png" alt="Mathpix"></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui container center">
+        <div class="text-container-center">
+          <h2 class="ui header">No minimum fee</h2>
+          <p>Our policy is that users should only pay for what they use. There will never be any minimum fee.</p>
+          <p>As a beta user, you may enjoy free unlimited access to Losswise until December 1st.</p>
+          <p>If you are a student, please email us at <a href="mailto:support@losswise.com">support@losswise.com</a>.</p>
+        </div>
+        <div class="row plan-container">
+          <div class="ui link stackable cards">
+            <div class="card image-shadow">
+              <div class="content plan-header">
+                <div class="header">Free</div>
+              </div>
+              <div class="content">
+                <div class="center aligned meta"></div>
+                <div class="description">
+                  <div role="list" class="ui list">
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="desktop icon"></i> <strong>750</strong> experiment hours of monitoring per month
+                      </span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="mouse pointer icon"></i> <strong>100,000</strong> data points per month
+                      </span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="calendar icon"></i> <strong>1 week</strong> data history
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card image-shadow">
+              <div class="content plan-header">
+                <div class="header">Pro</div>
+              </div>
+              <div class="content">
+                <div class="center aligned meta"></div>
+                <div class="description">
+                  <div role="list" class="ui list">
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="desktop icon"></i> <strong>$0.1</strong> per experiment hour monitored
+                      </span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="mouse pointer icon"></i> <strong>$0.05</strong> per 1000 data points logged
+                      </span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span>
+                        <i class="calendar icon"></i> <strong>1</strong> year data history
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card image-shadow">
+              <div class="content plan-header">
+                <div class="header">Enterprise</div>
+              </div>
+              <div class="content">
+                <div class="center aligned meta"></div>
+                <div class="description">
+                  <div role="list" class="ui list">
+                    <div role="listitem" class="item">
+                      <span><i class="home icon"></i> On premise</span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span><i class="handshake icon"></i> SLA's</span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span><i class="disk outline icon"></i> Volume discounts</span>
+                    </div>
+                    <div role="listitem" class="item">
+                      <span><i class="call icon"></i> Contact us</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="ui vertical stripe segment"> -->
+<!--   <div class="ui text container"> -->
+<!--     <h3 class="ui header">Focus on the things that matter</h3> -->
+<!--     <p>With Losswise you become liberated from time consuming book keeping chores so you can focus on what's most important: improving dataset quantity and quality, and experimenting with different models.</p> -->
+<!--   </div> -->
+<!-- </div> -->
+
+<div class="ui vertical footer segment">
+  <div class="ui center aligned container">
+    <!-- <img src="/images/logo.png" style="height: auto; width: 10em" class="ui centered huge image" /> -->
+    <img src="../images/LS_White_Logo.png"/>
+    <!--<div class="ui centered"><p class="ui centered huge image">support@losswise.com</p></div>-->
+  </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="../dist/semantic.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script> PR.prettyPrint()</script>
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("299edcdd4810b747cc76780ae986b5b1"); mixpanel.track("Landing page loaded");</script><!-- end Mixpanel -->
+
+
+<script>
+  // todo: uncomment this to add intercom
+  // window.intercomSettings = {
+  //   app_id: "yrwulorm"
+  // };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/yrwulorm';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+</body>
+
+</html>

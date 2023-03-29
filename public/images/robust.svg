@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="51px" viewBox="0 0 61 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-server</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-10.4508464%" y1="30.4917276%" x2="65.1464844%" y2="30.4917276%" id="linearGradient-1">
+            <stop stop-color="#36D4ED" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="6.18963596%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#73CF45" offset="0%"></stop>
+            <stop stop-color="#04AA51" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="-188.818359%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#73CF45" offset="0%"></stop>
+            <stop stop-color="#04AA51" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="FEATURES-1026" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="10-22-Product-Page-" transform="translate(-990.000000, -3001.000000)">
+            <g id="ic-server" transform="translate(990.000000, 3001.000000)">
+                <rect id="Rectangle-8" fill="url(#linearGradient-1)" x="0" y="0" width="60" height="17" rx="3"></rect>
+                <rect id="Rectangle-8-Copy" fill="url(#linearGradient-1)" x="0" y="17" width="60" height="17" rx="3"></rect>
+                <rect id="Rectangle-8-Copy-2" fill="url(#linearGradient-1)" x="0" y="34" width="60" height="17" rx="3"></rect>
+                <rect id="Rectangle-7" stroke="url(#linearGradient-2)" stroke-width="1.5" x="1.75" y="1.75" width="58.5" height="13.5" rx="3"></rect>
+                <circle id="Oval-2" fill="url(#linearGradient-3)" cx="54.5" cy="8.5" r="2.5"></circle>
+                <circle id="Oval-2-Copy-3" fill="#36D4ED" cx="47.5" cy="8.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy-6" fill="#36D4ED" cx="41.5" cy="8.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy-7" fill="#36D4ED" cx="41.5" cy="25.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy-8" fill="#36D4ED" cx="41.5" cy="42.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy-4" fill="#36D4ED" cx="47.5" cy="25.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy-5" fill="#36D4ED" cx="47.5" cy="42.5" r="1.5"></circle>
+                <circle id="Oval-2-Copy" fill="url(#linearGradient-3)" cx="54.5" cy="25.5" r="2.5"></circle>
+                <circle id="Oval-2-Copy-2" fill="url(#linearGradient-3)" cx="54.5" cy="42.5" r="2.5"></circle>
+                <rect id="Rectangle-7-Copy-3" stroke="url(#linearGradient-2)" stroke-width="1.5" x="1.75" y="18.75" width="58.5" height="13.5" rx="3"></rect>
+                <rect id="Rectangle-7-Copy-4" stroke="url(#linearGradient-2)" stroke-width="1.5" x="1.75" y="35.75" width="58.5" height="13.5" rx="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+    script(src="https://cdn.auth0.com/js/lock/10.16/lock.min.js")
+  body(style="background-color: #343434; display: flex; position: absolute; width: 100%; height: 100%; overflow: hidden; justify-content: center")
+    div(id="root" style="align-self: center; box-shadow: 0 10px 20px -10px rgba(0,0,0,.4); border-radius: 5px;")
+    script.
+      // Construct an instance of Auth0Lock with your clientId and aut0 domain name
+      var lock = new Auth0Lock('#{env.AUTH0_CLIENT_ID}', '#{env.AUTH0_DOMAIN}',{ auth: {
+            redirectUrl: '#{env.AUTH0_CALLBACK_URL}'
+          , responseType: 'code'
+          , params: {
+            scope: 'openid name email picture'
+          }
+        }, theme: { logo: 'images/logo.png', primaryColor: '#b7b7b7' },
+        languageDictionary: { emailInputPlaceholder: "something@youremail.com", title: "Authenticate" },
+        container: 'root'
+      });
+
+      // Show lock's login widget
+      lock.show();

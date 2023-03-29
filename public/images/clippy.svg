@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>clippy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="clippy" fill-rule="nonzero" fill="#000000">
+            <path d="M2,12 L6,12 L6,13 L2,13 L2,12 Z M7,6 L2,6 L2,7 L7,7 L7,6 Z M9,9 L9,7 L6,10 L9,13 L9,11 L14,11 L14,9 L9,9 Z M4.5,8 L2,8 L2,9 L4.5,9 L4.5,8 Z M2,11 L4.5,11 L4.5,10 L2,10 L2,11 Z M11,12 L12,12 L12,14 C11.984375,14.28125 11.890625,14.515625 11.703125,14.703125 C11.515625,14.890625 11.28125,14.984375 11,15 L1,15 C0.453125,15 0,14.546875 0,14 L0,3 C0,2.453125 0.453125,2 1,2 L4,2 C4,0.890625 4.890625,0 6,0 C7.109375,0 8,0.890625 8,2 L11,2 C11.546875,2 12,2.453125 12,3 L12,8 L11,8 L11,5 L1,5 L1,14 L11,14 L11,12 Z M2,4 L10,4 C10,3.453125 9.546875,3 9,3 L8,3 C7.453125,3 7,2.546875 7,2 C7,1.453125 6.546875,1 6,1 C5.453125,1 5,1.453125 5,2 C5,2.546875 4.546875,3 4,3 L3,3 C2.453125,3 2,3.453125 2,4 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+doctype
+html(lang="en")
+  head
+    title="Losswise"
+    link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href="/dist/semantic.min.css")
+    link(rel='stylesheet', href='/stylesheets/react-table.css')
+  body
+    script.
+      var USER_ID = '#{user.id}';
+      var USER_PICTURE = '#{user.picture}';
+      var API_KEY = '#{api_key}';
+      var PROJECTS = JSON.parse('!{projects}');
+      var USER_INFO = JSON.parse('!{userInfo}');
+
+    div(id="main")
+    div(id="loading-ui-container")
+      div(class="ui image")
+        img(src="/images/LS_Color_Logo.png")
+
+      div(class="ui segment")
+        div(class="ui active inverted dimmer")
+          div(class="ui loader")
+
+    script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js")
+    script(src="/js/ui.js")
+    script(src="https://code.highcharts.com/highcharts.js")
+    script(src="https://code.highcharts.com/modules/exporting.js")
+    script(src="https://code.highcharts.com/modules/exporting.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")

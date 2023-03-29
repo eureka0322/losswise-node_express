@@ -1,0 +1,22 @@
+# CircleCI insists on tests
+machine:
+  node:
+    version: 7.6.0
+
+test:
+  override:
+    - echo No tests
+
+dependencies:
+  override:
+    - npm install
+    - npm install webpack -g
+    - pip install --upgrade --user awsebcli
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - NODE_ENV=production webpack
+      - ./deploy.sh:
+          timeout: 1200

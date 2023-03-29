@@ -1,0 +1,6 @@
+[submodule "losswise-semantic"]
+	path = losswise-semantic
+	url = git@github.com:Mathpix/losswise-semantic.git
+[submodule "losswise-session-killer"]
+	path = losswise-session-killer
+	url = git@github.com:Mathpix/losswise-session-killer.git
